@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 $spacing-l;
+  font-family: $base-font-family;
+  background-color: $color-tertiary;
+}

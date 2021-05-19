@@ -1,0 +1,8 @@
+$spacing-default: rem-calc(4);
+$spacing-xxs: $spacing-default;
+$spacing-xs: calc(#{$spacing-default} * 2); // 8
+$spacing-s: calc(#{$spacing-default} * 4); // 16
+$spacing-m: calc(#{$spacing-default} * 6); // 24
+$spacing-l: calc(#{$spacing-default} * 8); // 34
+$spacing-xl: calc(#{$spacing-default} * 10); // 40
+$spacing-xxl: calc(#{$spacing-default} * 12); // 48

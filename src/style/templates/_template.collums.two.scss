@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: rem-calc(300) auto;
+  grid-template-rows: auto;
+  margin-top: $spacing-m;
+  justify-items: stretch;
+
+  grid-template-areas:
+    "grid-header grid-header"
+    "grid-toolbar grid-content"
+    "grid-footer grid-footer";
+
+}
+
+.grid-toolbar {
+  grid-area: grid-toolbar;
+}
+
+.grid-header {
+  grid-area: grid-header;
+}
+
+.grid-content {
+  grid-area: grid-content;
+}
+
+.grid-footer {
+  grid-area: grid-footer;
+}
