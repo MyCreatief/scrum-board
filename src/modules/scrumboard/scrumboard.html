@@ -2,9 +2,17 @@
   <div class="grid-toolbar">
     <toolbar></toolbar>
   </div>
+
   <div class="grid-header">grid-header</div>
+
   <section class="grid-content">
-    <card v-for="card in cards" v-bind:key="card"></card>
+    <card :class="card.color"
+      v-for="(card, key) in cards"
+      v-bind:key="key"
+      :content="card.content"
+          :style="{zIndex: (key+1)}"
+    ></card>
   </section>
+
   <div class="grid-footer">grid-footer</div>
 </div>
