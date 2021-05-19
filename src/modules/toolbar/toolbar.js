@@ -2,9 +2,9 @@ export default {
   name: 'toolbar',
   methods: {
     addCard: function() {
-      this.$store.dispatch('addCard', this);
-      this.content = 'new content';
+      this.content = 'new content...';
       this.color = 'default';
+      this.$store.dispatch('addCard', this);
     }
   }
 }
