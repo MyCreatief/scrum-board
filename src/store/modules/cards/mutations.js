@@ -6,5 +6,9 @@ export default {
     }
 
     state.cards.unshift(newCard);
+  },
+  DELETE_CARD: (state, payload) => {
+    const index = state.cards.findIndex(card => card.id === payload);
+    state.cards.splice(index, 1);
   }
 }
