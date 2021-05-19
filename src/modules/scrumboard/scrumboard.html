@@ -1,8 +1,10 @@
 <div class="container">
-  <div class="grid-toolbar">grid-toolbar</div>
+  <div class="grid-toolbar">
+    <toolbar></toolbar>
+  </div>
   <div class="grid-header">grid-header</div>
   <section class="grid-content">
-    <card v-for="card in cards"></card>
+    <card v-for="card in cards" v-bind:key="card"></card>
   </section>
   <div class="grid-footer">grid-footer</div>
 </div>
