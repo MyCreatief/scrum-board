@@ -5,6 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    'cards': [
+      {
+        'content': 'content',
+        'color': 'default',
+        'zIndex': 1
+      }
+    ]
   },
   mutations: {
   },
