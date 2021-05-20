@@ -5,13 +5,14 @@
 
   <div class="grid-header">grid-header</div>
 
-  <section class="grid-content">
+  <section class="grid-content" @mousemove="doDrag">
     <card :class="card.color"
       v-for="(card, key) in cards"
-      v-bind:key="key"
+      :key="key"
       :id="key"
       :content="card.content"
-      :style="{zIndex:(key + 1)}"
+      @mouseDown="mouseDown"
+      :style="{zIndex:(key + 1), left: card.positionx + 'px', top: card.positiony + 'px' }"
     ></card>
   </section>
 
