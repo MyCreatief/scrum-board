@@ -13,5 +13,8 @@ export default {
   },
   dropCard: (context, payload) => {
     context.commit("SET_CARD_UNACTIVE", payload)
+  },
+  updateContent: (context, payload) => {
+    context.commit("UPDATE_CONTENT", payload)
   }
 }

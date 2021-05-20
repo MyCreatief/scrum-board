@@ -24,5 +24,8 @@ export default {
   },
   SET_CARD_UNACTIVE: (state, payload) => {
     state.cards[payload].dragging = false;
+  },
+  UPDATE_CONTENT: (state, payload) => {
+    state.cards[payload.id].content = payload.submittedContent;
   }
 }

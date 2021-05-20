@@ -5,7 +5,9 @@ export default {
       mouseTouchPositionX: 0,
       mouseTouchPositionY: 0,
       oldPositionX: 0,
-      oldPositionY: 0
+      oldPositionY: 0,
+      toggleEdit: false,
+      submittedContent: null
     }
   },
   props: {
@@ -27,6 +29,23 @@ export default {
 
         this.$store.dispatch("setCardToActive", id);
       }
+    },
+    edit: function (id) {
+      this.toggleEdit = true;
+      this.$nextTick(() => {
+        this.$refs[id].focus();
+      });
+    },
+    blurField(id){
+      let submittedContent = this.submittedContent;
+      this.$store.dispatch("updateContent", {submittedContent, id});
+      this.toggleEdit = false;
+    },
+    showField(){
+      return this.toggleEdit;
     }
-  }
+  },
+  mounted () {
+    this.submittedContent = this.content
+  },
 }
